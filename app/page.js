@@ -1,9 +1,16 @@
-export default function Home() {
-  return (
-    <main>
-      <h2 className="text-2xl border-2 border-green-500 p-5">Hello world</h2>
-      <button className="text-xl m-4 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-2xl  cursor-pointer">Click Me</button>
+// app/page.jsx (Server Component)
+import slider1 from "@/public/image/female.jpg";
+import slider2 from "@/public/image/female.jpg";
+import slider3 from "@/public/image/female.jpg";
+import SliderClient from "./components/SliderClient";
 
-    </main>
+export default function Page() {
+  const images = [slider1.src, slider2.src, slider3.src];
+  console.log(images);
+
+  return (
+    <div className="p-6">
+      <SliderClient images={images} />
+    </div>
   );
 }
